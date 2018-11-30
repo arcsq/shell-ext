@@ -60,3 +60,4 @@ export LSCOLORS=fxFxBxDxCxegedabagacad
 alias gitgr="git log --pretty='%h, %s, %ar, %cn' --graph | column -s ',' -t"
 alias gitlg="git log --pretty='%h, %s, %ar, %cn' | column -s ',' -t"
 
+export PATH=.:$PATH$
