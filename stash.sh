@@ -13,7 +13,7 @@ if [ $# -eq 0 ]; then
   read -p "$NOTE_PROMPT" NOTE
   while [ "$NOTE" != ""  ];
   do
-    echo "$TAGS $NOTE" >> $NOTE_FILE
+    echo "`date -u +"%F %R"` $TAGS $NOTE" >> $NOTE_FILE
     read -p "$NOTE_PROMPT" NOTE
   done
 else
