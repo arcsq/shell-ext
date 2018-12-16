@@ -1,8 +1,8 @@
 set_bash_prompt(){
    if [ `whoami` = 'admin' ]; then
-       PS1="\[\e[1m\]\[\e[35m\]\u\[\e[0m\]:\[\e[1m\]\[\e[31m\]\w\[\e[0m\]$(prompt_info) \[\e[1m\]\[\e[34m\]$\[\e[0m\] "
+       PS1="\[\e[1m\]\[\e[35m\]\u\[\e[0m\]:\[\e[1m\]\[\e[34m\]\w\[\e[0m\]$(prompt_info) \[\e[1m\]\[\e[34m\]$\[\e[0m\] "
    else
-       PS1="\[\e[1m\]\[\e[32m\]\u\[\e[0m\]:\[\e[1m\]\[\e[31m\]\w\[\e[0m\]$(prompt_info) \[\e[1m\]\[\e[34m\]$\[\e[0m\] "
+       PS1="\[\e[1m\]\[\e[32m\]\u\[\e[0m\]:\[\e[1m\]\[\e[34m\]\w\[\e[0m\]$(prompt_info) \[\e[1m\]\[\e[34m\]$\[\e[0m\] "
    fi
 }
 
@@ -24,7 +24,7 @@ prompt_info() {
 PROMPT_COMMAND=set_bash_prompt
 
 export CLICOLOR=1
-export LSCOLORS=dxFxBxDxCxegedabagacad
+export LSCOLORS=DxFxBxDxCxegedabagacad
 
 
 #The order of the attributes are as follows:
