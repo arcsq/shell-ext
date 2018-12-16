@@ -1,5 +1,9 @@
 set_bash_prompt(){
-    PS1="\[\e[1m\]\[\e[32m\]\u\[\e[0m\]:\w$(prompt_info) $ "
+   if [ `whoami` = 'admin' ]; then
+       PS1="\[\e[1m\]\[\e[35m\]\u\[\e[0m\]:\w$(prompt_info) \[\e[1m\]\[\e[34m\]$\[\e[0m\] "
+   else
+       PS1="\[\e[0m\]\[\e[32m\]\u\[\e[0m\]:\w$(prompt_info) \[\e[1m\]\[\e[34m\]$\[\e[0m\] "
+   fi
 }
 
 prompt_info() {
