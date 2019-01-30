@@ -11,12 +11,17 @@ prompt_info() {
                 tracked=`git status -s -uno | wc -l | awk '{$1=$1};1'`
                 all=`git status -s -unormal | wc -l | awk '{$1=$1};1'`
                 branch=`git branch | grep -e "^*" | cut -d' ' -f 2`
+		ahead=`git status -bs -unormal | grep -i '\[ahead' | wc -l | awk '{$1=$1};1'`
+		aheadmark=''
+		if [ "$ahead" = "1" ]; then
+			aheadmark='++++ '
+		fi
                 if [ "$all" = "0" ]; then
-                        echo " \[\033[0;32m\]($branch)\[\033[0m\]"
+                        echo " \[\033[0;32m\]($aheadmark$branch)\[\033[0m\]"
                 elif [ "$all" = "$tracked" ]; then
-                        echo " \[\033[1;33m\]($branch+)\[\033[0m\]"
+                        echo " \[\033[1;33m\]($aheadmark$branch+)\[\033[0m\]"
                 else
-                        echo " \[\033[1;31m\]($branch*)\[\033[0m\]"
+                        echo " \[\033[1;31m\]($aheadmark$branch*)\[\033[0m\]"
                 fi
         fi
 }
