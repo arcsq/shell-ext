@@ -1,3 +1,7 @@
+ff() {
+ find . -type f -exec grep --color=always -rin $1 {} \;
+}
+
 set_bash_prompt(){
    if [ `whoami` = 'admin' ]; then
        PS1="\[\e[1m\]\[\e[35m\]\u\[\e[0m\]:\[\e[1m\]\[\e[34m\]\w\[\e[0m\]$(prompt_info) \[\e[1m\]\[\e[34m\]$\[\e[0m\] "
