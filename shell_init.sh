@@ -1,5 +1,19 @@
 ff() {
- find . -type f -exec grep --color=always -rin $1 {} \;
+ if [ "$1" = "" ]; then
+  echo "usage: ff search-string"
+ else
+  echo "Searching files for $1..."
+  find . -type f -exec grep --color=always -rin $1 {} \;
+ fi 
+}
+
+ft() {
+ if [ "$1" = "" ]; then
+  echo "usage: ft search-string"
+ else
+  echo "Searching for $1..."
+  find . -type f -iname "*$1*"
+ fi
 }
 
 set_bash_prompt(){
