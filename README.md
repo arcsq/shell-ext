@@ -22,3 +22,4 @@ docker run --name portainer --restart unless-stopped -d -p 9000:9000 -v /var/run
 echo | openssl s_client -connect '9.9.9.9:853' 2>/dev/null | openssl x509 -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
 ```
 
+
