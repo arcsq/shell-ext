@@ -5,6 +5,11 @@
 ssh-keygen -t rsa -C "username readable" -f "username"
 ```
 
+## Show Fingerprint of key
+```
+ssh-keygen -E md5 -lf <<key-file>>
+```
+
 ## tmux
 
 Create a file called .tmux.conf and add following
