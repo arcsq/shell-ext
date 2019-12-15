@@ -10,6 +10,26 @@ ssh-keygen -t rsa -C "username readable" -f "username"
 ssh-keygen -E md5 -lf <<key-file>>
 ```
 
+## Keeping multiple Git Accounts using Key Pair
+1. Create different key pairs for different account.
+2. Call first as key-1 and second as key-2
+3. Under .ssh create config file that looks like below
+```
+Host github.com-key-1
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/key-1
+
+Host github.com-key-2
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/key-2
+```
+4. Clone repository using following syntax (for key-1 git) 
+```
+git clone git@github.com-key-1:key-1/<<repo-name>>.git
+```
+
 ## tmux
 
 Create a file called .tmux.conf and add following
