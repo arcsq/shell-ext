@@ -62,7 +62,16 @@ function fish_greeting
 end
 funcsave fish_greeting
 
+vi ~/.config/fish/functions/fish_custom_prompt.fish
+function fish_custom_prompt
+    string replace -r "$HOME" "~" "$PWD"
+end
+
+vi ./.config/fish/config.fish
+Add fish_custom_prompt
+
 vi ~/.config/fish/functions/fish_prompt.fish
 Change printf statements to your liking (like end with <space>$<space>
+CHange (prompt_pwd) to (fish_custom_prompt) at all places
 Save
 ```
