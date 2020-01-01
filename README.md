@@ -51,3 +51,18 @@ echo | openssl s_client -connect '9.9.9.9:853' 2>/dev/null | openssl x509 -pubke
 ```
 ssh -i <<path_to_pem>> ec2-user@<<host>>
 ```
+
+### Fish Shell Settings
+```
+Select Lava Config
+
+Prompt Screen Savvy
+
+function fish_greeting
+end
+funcsave fish_greeting
+
+vi ~/.config/fish/functions/fish_prompt.fish
+Change printf statements to your liking (like end with <space>$<space>
+Save
+```
