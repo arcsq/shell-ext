@@ -74,4 +74,7 @@ vi ~/.config/fish/functions/fish_prompt.fish
 Change printf statements to your liking (like end with <space>$<space>
 CHange (prompt_pwd) to (fish_custom_prompt) at all places
 Save
+
+Download Dracula iTerm theme
+https://github.com/dracula/iterm
 ```
