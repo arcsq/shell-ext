@@ -73,6 +73,7 @@ Add fish_custom_prompt
 vi ~/.config/fish/functions/fish_prompt.fish
 Change printf statements to your liking (like end with <space>$<space>
 CHange (prompt_pwd) to (fish_custom_prompt) at all places
+Add (set_color $fish_color_operator) (__fish_git_prompt)
 Save
 
 Download Dracula iTerm theme
