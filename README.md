@@ -13,6 +13,11 @@ change to source repo
 git push --mirror <<dest repo>>
 ```
 
+## HARD reset
+```
+git clean -fdx
+```
+
 ## Show Fingerprint of key
 ```
 ssh-keygen -E md5 -lf <<key-file>>
