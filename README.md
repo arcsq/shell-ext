@@ -2,7 +2,15 @@
 ## Creating ssh key
 
 ```
-ssh-keygen -t rsa -C "username readable" -f "username"
+ssh-keygen -t rsa -C "Description" -f "Filename"
+ssh-keygen -t ed25519 -C "Description" -f "Filename"
+```
+
+## Mirror repositories
+```
+git clone --bare <<source repo>>
+change to source repo
+git push --mirror <<dest repo>>
 ```
 
 ## Show Fingerprint of key
