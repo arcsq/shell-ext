@@ -1,4 +1,4 @@
-# shell-ext
+# Useful Handy Shell Commands
 ## Creating ssh key
 
 ```
