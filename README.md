@@ -37,14 +37,12 @@ Host github.com-key-2
     HostName github.com
     User git
     IdentityFile ~/.ssh/key-2
-```
-4. Clone repository using following syntax (for key-1 git) 
+```4. Clone repository using following syntax (for key-1 git)
 ```
 git clone git@github.com-key-1:key-1/<<repo-name>>.git
 ```
 
 ## tmux
-
 Create a file called .tmux.conf and add following
 ```
 source-file /path/to/tmux_init.conf
@@ -92,3 +90,12 @@ Save
 Download Dracula iTerm theme
 https://github.com/dracula/iterm
 ```
+
+### Link to Directory
+
+```
+ln -s <real storage location> <link dir>
+```
+
+### iCloud Directory Location
+> ~/Library/Mobile\ Documents/com~apple~CloudDocs  
